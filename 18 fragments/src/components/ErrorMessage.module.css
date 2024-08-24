@@ -1,0 +1,12 @@
+.message{
+  color: darkmagenta;
+  font-size: 20px;
+}
+
+.bold-text{
+  font-weight: 600;
+}
+
+.italic-text{
+  font-style: italic;
+}
