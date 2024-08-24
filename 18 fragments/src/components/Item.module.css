@@ -2,3 +2,8 @@
   background-color: bisque;
   border: 1px solid darkgray;
 }
+
+.button{
+  float: right;
+  color: blanchedalmond;
+}
