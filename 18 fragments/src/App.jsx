@@ -6,7 +6,7 @@ import FoodInput from "./components/foodInput";
 import FoodItems from "./components/FoodItems";
 
 function App() {
-  let [foodItems, setFoodItems] = useState([]);
+  let [foodItems, setFoodItems] = useState([]); //empty array in beginning 
 
   const onKeyDown = (event) => {
     if (event.key === 'Enter') {
