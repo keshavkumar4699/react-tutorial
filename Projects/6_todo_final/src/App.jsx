@@ -7,7 +7,17 @@ function App() {
   let [todoItem, setTodoItem] = useState([]);
 
   let handleAddButton = (todoText, selectedDate) => {
-    let updatedTodoItems = [...todoItem, { todoname: todoText, tododate: selectedDate }];
+    let updatedTodoItems = [
+      ...todoItem,
+      { todoname: todoText, tododate: selectedDate },
+    ];
+    setTodoItem(updatedTodoItems);
+  };
+
+  let handleDeleteButton = (item) => {
+    console.log(item);
+    let updatedTodoItems = todoItem.filter((todo) => todo.todoname !== item);
+    console.log(updatedTodoItems);
     setTodoItem(updatedTodoItems);
   };
 
@@ -15,7 +25,7 @@ function App() {
     <div className="container main-container">
       <h4 className="text-center">TODO APP</h4>
       <AddTodo handleAddButton={handleAddButton}></AddTodo>
-      <Todo todoItems={todoItem}></Todo>
+      <Todo todoItems={todoItem} handleDeleteButton={handleDeleteButton}></Todo>
     </div>
   );
 }
