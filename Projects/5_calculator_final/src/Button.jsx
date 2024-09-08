@@ -1,8 +1,8 @@
 import styles from './Button.module.css'
 
-let Button = ({text}) => {
+let Button = ({text, handleOnClick}) => {
   return (
-    <button className = {styles.button}>{text}</button>
+    <button className = {styles.button} onClick={handleOnClick}>{text}</button>
   );
 }
 
