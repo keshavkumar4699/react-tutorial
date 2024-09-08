@@ -1,0 +1,21 @@
+.rt_container{
+  max-height: 60vh;
+  overflow: auto;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+.rt_row{
+  padding: 5px 0px;
+  margin: 5px 2px;
+  border-radius: 5px;
+}
+
+.rt_row:hover{
+  background-color: aquamarine;
+}
+
+.rt_message{
+  color: azure;
+}
