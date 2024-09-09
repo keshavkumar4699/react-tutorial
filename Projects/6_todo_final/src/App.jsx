@@ -1,4 +1,4 @@
-import AddTodo from "./components/AddTODO";
+import AddTodo from "./components/AddTodo";
 import Todo from "./components/Todo";
 import "./App.css";
 import { useState } from "react";
@@ -6,18 +6,31 @@ import { useState } from "react";
 function App() {
   let [todoItem, setTodoItem] = useState([]);
 
+  // let handleAddButton = (todoText, selectedDate) => {
+  //   let updatedTodoItems = [
+  //     ...todoItem,
+  //     { todoname: todoText, tododate: selectedDate },
+  //   ];
+  //   setTodoItem(updatedTodoItems);
+  // };
+
   let handleAddButton = (todoText, selectedDate) => {
-    let updatedTodoItems = [
-      ...todoItem,
+    // setTodoItem((currValue)=>{
+    //   let newTodoItems =  [
+    //     ...currValue,
+    //     { todoname: todoText, tododate: selectedDate },
+    //   ];
+    //   return newTodoItems;
+    // });
+    setTodoItem((currValue) => [
+      ...currValue,
       { todoname: todoText, tododate: selectedDate },
-    ];
-    setTodoItem(updatedTodoItems);
+    ]);
   };
 
   let handleDeleteButton = (item) => {
     console.log(item);
     let updatedTodoItems = todoItem.filter((todo) => todo.todoname !== item);
-    console.log(updatedTodoItems);
     setTodoItem(updatedTodoItems);
   };
 
