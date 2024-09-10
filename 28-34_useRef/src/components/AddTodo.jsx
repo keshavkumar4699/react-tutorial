@@ -1,22 +1,10 @@
 import styles from "./AddTodo.module.css";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { IoMdAddCircle } from "react-icons/io";
 
 function AddTodo({ handleAddButton }) {
-  // const [todoText, setTodoText] = useState("");
-  // const [selectedDate, setSelectedDate] = useState("");
   const todoNameElement = useRef();
   const dueDateElement = useRef();
-
-  // function handleTodoName(event) {
-  //   setTodoText(event.target.value);
-  //   noOfUpdates.current += 1;
-  // };
-
-  // function handleDateChange(event) {
-  //   setSelectedDate(event.target.value);
-  //   console.log(`noOfUpdates are: ${noOfUpdates.current}`);
-  // };
 
   const handleAddClick = (event) => {
     event.preventDefault();
@@ -25,8 +13,6 @@ function AddTodo({ handleAddButton }) {
     todoNameElement.current.value = "";
     dueDateElement.current.value = "";
     handleAddButton(todoText, selectedDate)
-    // setTodoText("");
-    // setSelectedDate("");
   };
   
   return (
@@ -38,8 +24,6 @@ function AddTodo({ handleAddButton }) {
             type="text"
             placeholder="Enter TODO here"
             ref={todoNameElement}
-            // onChange={handleTodoName}
-            // value={todoText}
           ></input>
         </div>
         <div className="col-4">
@@ -47,8 +31,6 @@ function AddTodo({ handleAddButton }) {
             className={styles.rt_input}
             type="date"
             ref={dueDateElement}
-            // onChange={handleDateChange}
-            // value={selectedDate}
           ></input>
         </div>
         <div className="col-2 text-center">
