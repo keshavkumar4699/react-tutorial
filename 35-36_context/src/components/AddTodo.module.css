@@ -1,0 +1,15 @@
+.rt_container{
+  margin: 30px 0px;
+}
+
+.rt_input{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(230, 230, 230);
+}
+
+.rt_button{
+  min-width: 80px;
+}
